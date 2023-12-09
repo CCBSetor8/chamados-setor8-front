@@ -9,6 +9,9 @@ import { DepartmentDetailComponent } from './modules/department/pages/detail/det
 import { ChurchListComponent } from './modules/church/pages/list/list.component';
 import { ChurchDetailComponent } from './modules/church/pages/detail/detail.component';
 
+import { CalledListComponent } from './modules/called/pages/list/list.component';
+import { CalledDetailComponent } from './modules/called/pages/detail/detail.component';
+
 
 
 
@@ -24,6 +27,10 @@ const routes: Routes = [
     { path: 'church-list', component: ChurchListComponent },
     { path: 'church-edit/:id', component: ChurchDetailComponent },
     { path: 'church-register', component: ChurchDetailComponent },
+
+    { path: 'called-list', component: CalledListComponent },
+    { path: 'called-register', component: CalledDetailComponent },
+
 ];
 
 @NgModule({
