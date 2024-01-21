@@ -18,7 +18,7 @@
                     <th></th>
                     <th>Id</th>
                     <th style="width: 25%">Nome</th>
-                    <th style="width: 25%">Nome</th>
+                    <th style="width: 25%">Email</th>
                     <th style="width: 25%">Departamento</th>
                     <th style="width: 25%">Perfil</th>
                     <th style="width: 25%">Data de criação</th>
@@ -33,10 +33,10 @@
                     <td>{{ user.id }}</td>
                     <td>{{ user.name }}</td>
                     <td>{{ user.email }}</td>
-                    <td>{{ user.department }}</td>
-                    <td>{{ user.profile }}</td>
-                    <td>{{ user.createdAt | date: 'dd/MM/yyyy' }}</td>
-                    <td>{{ user.updatedAt | date: 'dd/MM/yyyy' }}</td>
+                    <td>{{ user.departmentName }}</td>
+                    <td>{{ user.profileName }}</td>
+                    <td>{{ user.creationDate | date: 'dd/MM/yyyy' }}</td>
+                    <td>{{ user.updateDate | date: 'dd/MM/yyyy' }}</td>
                 </tr>
             </ng-template>
             <ng-template pTemplate="paginatorleft">

@@ -7,16 +7,24 @@ import { Router } from '@angular/router';
 @Component({
     selector: 'app-user-list',
     templateUrl: './list.component.html',
-    styleUrls: ['./list.component.css']
+    styleUrls: ['./list.component.css'],
 })
 export class UserListComponent {
+    users: User[] = [];
 
-    users: User[] = []
-
-    constructor(private userService: UserService, private router: Router) { }
+    constructor(
+        private userService: UserService,
+        private router: Router
+    ) {}
 
     ngOnInit() {
-        this.users = this.userService.getData();
+        this.getUsers();
+    }
+
+    getUsers(): void {
+        this.userService.getAll().subscribe(item => {
+            this.users = item;
+        });
     }
 
     edit(id: number): void {
